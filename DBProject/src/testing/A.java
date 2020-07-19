@@ -13,6 +13,7 @@ public class A {
 		Class.forName("com.mysql.cj.jdbc.Driver");
 		Connection c = DriverManager.getConnection("jdbc:mysql://localhost:3306/classicmodels","root","root");
 		Statement s = c.createStatement();
+		System.out.println("Helloo");
 		ResultSet rs = s.executeQuery("select * from customers;");
 		while(rs.next()){
 			System.out.println(rs.getString("phone")+  "   " +  rs.getString(1));
